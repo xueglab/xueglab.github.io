@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HCA-CHINA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+       
+    </style>
+ </head>
+<body  style="overflow-x:hidden;overflow-y:hidden">
+<iframe   src="./fresh.html" id="myiframe"    frameborder="0" width="100%"> </iframe>
+<script type="text/javascript"   src="./jquery-3.4.1.min.js"></script>
+<script> 
+    $(document).ready(function(){
+        //高度设置
+        var height = $(window).height();
+        $('#myiframe').height(height);
+    })
+    function changeFrameHeight(){
+        var ifm= document.getElementById("myiframe");
+        $('#myiframe').height($(window).height());
+    }
+    window.onresize=function(){
+        changeFrameHeight();
+    }
+ 
+    </script>
+</body>
+</html>
